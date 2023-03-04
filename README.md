@@ -11,7 +11,7 @@ To run, have the following installed:
 * ffmpeg (tested with 2023-02-27)
 * tkinter (tested with 8.6)
 
-### Issues and Plans
+## Issues and Plans
 <p>There's still a few... okay, a lot of things to work out. If anyone knows how to handle these, please let me know.
     <ul>
         <li><b>Handling errors from ffmpeg.</b> This is the big one, and I really have no clue how to tackle it, unfortunately. Say something like "skip frames at beginning" being too many frames, for example. I don't want to have to make the user decipher an ffmpeg log (not that the window stays up anyway... look into subprocess module for that.)
@@ -23,7 +23,7 @@ To run, have the following installed:
         <li>Make this manual more appealing with a less text-heavy approach... Cute TV head explaining things more visually and easily? Audio too, for accessibility if nothing else. We need more 90s vibes!!!</li>
     </ul>
 
-### Final word
+## Final word
 <p>I cobbled this together for me and my friends to watch some movies and shows that would be dangerous for me otherwise.</p>
 <p>This is by no means a definitive answer to making media more accessible, of course. I <b>highly</b> encourage PRs, issue threads, and forks if necessary. If you couldn't tell, I kind of suck at UI design.</p>
 <p>I also hope this raises some awareness about photosensitivity, and maybe even kickstart some more software development to make life easier for epileptics. Many similar projects haven't been updated in years, and I believe it's time for this sort of thing to get off the ground again.</p>
