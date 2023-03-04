@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>ffmpeg photosensitivity GUI guide</title>
+  </head>
+  <body>
+
+    <h1>ffmpeg photosensitivity GUI Guide</h1>
+    <p>by neomodulo</p>
+    <p>Written for pre-release version 0.1</p>
+
+    <h2>Getting Your Video Ready</h2>
+	<p>You'll need to point out to the program where on your computer your video is, as well as where you'd like it saved.</p>
+    <p>To find the video you'd like to filter, find the section labelled "Target Video". Press the "Browse..." button, and a window should appear on your computer of your files. Select your file and press "OK" to continue.</p>
+    <p>In the text box by the button's side, you will see the path to the selected file on your computer. You can also edit this manually to point to somewhere else.</p>
+    <p>The same applies for where you'd like to save the video. In the section labelled "Destination Video", click "Browse..." and type in the new name of the filtered video. It's reccomended not to overwrite the old one in case you need to make some adjustments.</p>
+    
+    <h2>Adjusting The Filter</h2>
+    <p>There are 3 parameters to keep in mind when using the photosensitivity filter in order to make it work most effectively. They operate as follows:</p>
+    <p><b>Threshold:</b> The lower this is, the stricter the video will be filtered. This may come at the cost of video quality. It's reccomended to experiment with your video in particular to see what works best for you. In the future, we will have premade profiles for this. (Cartoon, Live, Video Game, Anime, etc.)
+    <p><b>Frames per Second: </b> The frames per second rate in your Target Video file. Also known as fps, or framerate. <b>This one is especially important!</b>  Your video's framerate can usually be found with your file manager, or a video player, in an "Information" section, usually.</p>
+    <p><b>Skip frames at beginning:</b> not sure how to explain this yet sorry </p>
+    <p>Once you have everything set, press the Run Filter button at the bottom right, and enjoy the flash-free results...! Hopefully. Things can always go wrong, so let's discuss some...
+	
+    <h2>Common Errors</h2>
+    <p>(TBD)</p>
+    
+    <h2>Issues and Plans</h2>
+    <p>There's still a few... okay, a lot of things to work out. If anyone knows how to handle these, please let me know.
+    <ul>
+        <li><b>Handling errors from ffmpeg.</b> This is the big one, and I really have no clue how to tackle it, unfortunately. Say something like "skip frames at beginning" being too many frames, for example. I don't want to have to make the user decipher an ffmpeg log (not that the window stays up anyway... look into subprocess module for that.)
+        <li>Cross-platform support. The main thing is dealing with how to handle finding and running ffmpeg when it isn't in your terminal by default. </li>
+        <li>General code cleanup (better checks, separating into multiple modules, etc.)</li>
+        <li>Profiles aren't in yet. Not anything to troubleshoot here, I'd just like to get the rest done before I add in bonus features.</li>
+        <li>Not the prettiest since I made it by hand and didn't realize I could just use a wysiwyg editor (oopsie) and doesn't scale... at all. Sorry 4K monitor users</li>
+        <li>A better name and any feature suggestions would be nice</li>
+        <li>Make this manual more appealing with a less text-heavy approach... Cute TV head explaining things more visually and easily? Audio too, for accessibility if nothing else. We need more 90s vibes!!!</li>
+    </ul>
+
+  </body>
+</html>
