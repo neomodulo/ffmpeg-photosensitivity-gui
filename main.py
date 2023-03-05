@@ -112,6 +112,7 @@ def gatherInfo():
 def informOfCommand():
     global ffPresent #0: not found   1: found by default   2: found at specified location
     ffPresent = 0
+    print("\n\nGUI: Trying to find ffmpeg... \n\n")
     try:
         subprocess.run("ffmpeg")
         ffPresent = 1
@@ -138,13 +139,14 @@ def informOfCommand():
             return (False,"I couldn't find the file you pointed me to. Did you mistype it? Does it still exist?")
 
     
-    return (False,"All systems go! Let's filter!")
+    return (True,"All systems go! Let's filter!")
     
 
 def makeCommand():
     global ffPresent
     appearError = "\"This message should not appear. If it does, it's a bug.\"\nPlease make an issue on GitHub. (neomodulo/ffmpeg-photosensitivity-gui)\nI apologize for the inconvinience."
-    print("ffPresent: " + str(ffPresent))
+    print("ffPresent found: " + str(ffPresent))
+    print("\n\nGUI: Trying to run... \n\n")
     if ffPresent == 1:
         try:
             com = "ffmpeg -i " + "\"" + currentLocations[0] + "\" -y" + " -filter:v photosensitivity=threshold=" + currentParams[0] + ":frames=" + currentParams[1] + ":skip=" + currentParams[2] + " \"" + currentLocations[1] + "\"" #could maybe append beginning instead of having two separate ones to maintain
@@ -188,11 +190,11 @@ def loadProfClick():
 def locateFFmpegClick():
     global ffmpegPath
     path = tk.filedialog.askopenfilename()
-    if path.endswith("ffmpeg.exe"): #find a way to make this work on non-windows systems
+    if path.endswith("ffmpeg.exe"): #find a way to make this work on non-windows systems. probably use if(os=win) do "ffmpeg.exe", then if(os=mac) change to .app, etc.
         ffmpegPath = path
     else:
-        tk.messagebox.showerror("Oh no!", message="I don't think the file you selected is ffmpeg.\nMake sure you've got the right one and try again.")
-    print(ffmpegPath)
+        tk.messagebox.showerror("Oh no!", message="Locating ffmpeg failed.\nMake sure you've got the right executable and try again.")
+    print("ffmpeg path set to " + ffmpegPath)
 
 #fileMenu.add_command(label="Save Profile As...", command = saveProfClick)
 #fileMenu.add_command(label="Open Profile", command = loadProfClick)
@@ -206,7 +208,7 @@ helpMenu = tk.Menu(menubar)
 menubar.add_cascade(label="Help", menu=helpMenu)
 
 def aboutPage():
-    tk.messagebox.showinfo(title="About", message="ffmpeg photosensitivity GUI\n0.1 pre-release version\n\nMarch 4, 2023 at 4:13 PM\nMade with love by neomodulo")
+    tk.messagebox.showinfo(title="About", message="ffmpeg photosensitivity GUI\n0.1.1 pre-release version\n\nMarch 4, 2023 at 8:19 PM\nMade with love by neomodulo")
 
 def helpPage():
     webbrowser.open('help.html')
