@@ -30,3 +30,5 @@ To learn more about ffmpeg is utilized, you can find the [documentation for the 
 <p>This is by no means a definitive answer to making media more accessible, of course. I <b>highly</b> encourage PRs, issue threads, and forks if necessary. If you couldn't tell, I kind of suck at UI design.</p>
 <p>I also hope this raises some awareness about photosensitivity, and maybe even kickstart some more software development to make life easier for epileptics. Many similar projects haven't been updated in years, and I believe it's time for this sort of thing to get off the ground again.</p>
 <p>Thank you for your interest in this project and reading to the end. :)</p>
+
+This project is licensed under the terms of the GNU AGPL v3.0 license. See license.txt for more details.
