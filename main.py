@@ -24,7 +24,7 @@ targetVideoLbl = tk.Label(window, text="Target Video:")
 targetVideoLbl.grid(column=0, row=0, sticky="w")
 
 #browse text box
-targetTxt = tk.Text(window, height=1, width=50)
+targetTxt = tk.Text(window, height=1, width=50, wrap="none")
 targetTxt.grid(column=0, row=1)
 
 #browse button
@@ -46,7 +46,7 @@ destVideoLbl = tk.Label(window, text="Destination Video:")
 destVideoLbl.grid(column=0, row=2, sticky="w")
 
 #browse text box
-destTxt = tk.Text(window, height=1, width=50)
+destTxt = tk.Text(window, height=1, width=50, wrap="none")
 destTxt.grid(column=0, row=3)
 
 #browser button
@@ -93,7 +93,9 @@ skipIn.insert(0,1)
 
 def gatherInfo():
     global currentParams
-    if (int(skipIn.get()) == 0):
+    skipTemp = float(skipIn.get())
+    skipIn.set(round(skipTemp))
+    if (int(skipIn.get()) < 1):
         skipIn.set(1)
     if (int(skipIn.get()) > 1024) :
         skipIn.set(1024)
@@ -225,7 +227,7 @@ def exportClick():
     tk.messagebox.showinfo(title="Run Filter", message=(infoMsg[1]))
     if infoMsg[0]:
         makeCommand()
-        tk.messagebox.showinfo(title="Run Filter", message=("Should be done!"))
+        tk.messagebox.showinfo(title="Run Filter", message=("Should be done! Check log for details."))
 
 exportButton = tk.Button(window, text = "Run Filter", command = exportClick)
 exportButton.grid(column=3, row=7)
