@@ -210,7 +210,7 @@ helpMenu = tk.Menu(menubar)
 menubar.add_cascade(label="Help", menu=helpMenu)
 
 def aboutPage():
-    tk.messagebox.showinfo(title="About", message="ffmpeg photosensitivity GUI\n0.1.1 pre-release version\n\nMarch 4, 2023 at 8:19 PM\nMade with love by neomodulo")
+    tk.messagebox.showinfo(title="About", message="ffmpeg photosensitivity GUI\n0.1.1 pre-release version\n\nMarch 5, 2023 at 8:08 PM\nMade with love by neomodulo")
 
 def helpPage():
     webbrowser.open('help.html')
