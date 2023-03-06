@@ -9,7 +9,9 @@ To run, have the following installed:
 * [Python 3](https://www.python.org/downloads/) (tested with 3.10)
 * [ffmpeg](https://ffmpeg.org/download.html) (tested with 2023-02-27)
 
-To learn more about ffmpeg is utilized, you can find [the documentation for the photosensitivity filter here.](https://ffmpeg.org/ffmpeg-filters.html#photosensitivity)
+Most releases also have PyInstaller builds, just make sure you meet the [system requirements.](https://pyinstaller.org/en/stable/requirements.html) FFmpeg is still required separately.
+
+To learn more about ffmpeg is utilized, you can find the [documentation for the photosensitivity filter here.](https://ffmpeg.org/ffmpeg-filters.html#photosensitivity)
 
 ## Issues and Plans
 <p>There's still a few... okay, a lot of things to work out. If anyone knows how to handle these, please let me know.
